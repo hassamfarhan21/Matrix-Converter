@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+      <!-- paticls css link  -->
+    <link rel="stylesheet" href="particels.css">
+</head>
+<body>
+ <!-- nav bar -->
+
+ <div class="container-fluid ">
+  <div class="row">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3  ">
+<div class="container-fluid">
+  <a class="navbar-brand" href="#">
+    <i class="fas fa-balance-scale" id="icon"></i>
+    <span class="logo">CONVER<span>SION</span> </span>
+    <!-- <img src="250x250-general-icon.jpg" class="rounded-circle"  alt="" width="50px" height="50px"> -->
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav  mb-2 mb-lg-0 " id="nav">
+      <li class="nav-item">
+        <a class="nav-link active text-Dark" aria-current="page" href="index.html">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle ttext-Dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Articles
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="Article1.html">Article1</a></li>
+          <li><a class="dropdown-item" href="Article2.html">Article2</a></li>
+          <li><a class="dropdown-item" href="Article3.html">Article3</a></li>
+          <li><a class="dropdown-item" href="Article4.html">Article4</a></li>
+
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-Dark" href="history.html">History</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link text-Dark" href="faqs.html" tabindex="-1" aria-disabled="true">FAQs</a>
+      
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+</div>
+</div>
+ <!-- nav bar  -->
+
+<div id="particles-js"></div>
+<div class="converter-wrapper">
+  <h1> MATRIX CONVERTER</h1>
+
+  <form name="property_form">
+    <span>
+      <select class="select-property" name="the_menu" size="1" onChange="UpdateUnitMenu(this, document.form_A.unit_menu); UpdateUnitMenu(this, document.form_B.unit_menu)">
+      </select>
+    </span>
+  </form>
+
+  <div class="converter-side-a">
+    <form name="form_A" onSubmit="return false">
+      <input type="text" class="numbersonly" name="unit_input" maxlength="20" value="0" onKeyUp="CalculateUnit(document.form_A, document.form_B)">
+      <span>
+        <select name="unit_menu" onChange="CalculateUnit(document.form_B, document.form_A)">
+        </select>
+      </span>
+    </form>
+  </div> <!-- /converter-side-a -->
+  
+ <div class="converter-equals">
+  <i class="fa-solid fa-arrow-right-arrow-left"id="icon"></i>
+ </div> <!-- /converter-side-a -->
+
+  <div class="converter-side-b">
+    <form name="form_B" onSubmit="return false">
+      <input type="text" class="numbersonly" name="unit_input" maxlength="20" value="0" onkeyup="CalculateUnit(document.form_B, document.form_A)">
+      <span>
+        <select name="unit_menu" onChange="CalculateUnit(document.form_A, document.form_B)">
+        </select>
+      </span>
+    </form>
+  </div> <!-- /converter-side-b -->
+
+</div><!-- /converter-wrapper -->
+
+
+
+
+
+</div>
+</div>
+
+
+<!-- footer -->
+<script src="index.js"></script>
+
+<!-- particls link -->
+<script src="particles.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
